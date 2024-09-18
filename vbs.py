@@ -117,7 +117,7 @@ def run_strategy(symbol, k=0.5, position_pct=0.4, leverage=10):
     else:
         print(f"{datetime.now()} - {symbol} 매매 신호 없음")
     
-# 전략 실행 (15초마다)
+# 전략 실행 (30초마다)
 if __name__ == "__main__":
     try:
         while True:
@@ -127,7 +127,7 @@ if __name__ == "__main__":
             # 이더리움 전략 실행
             run_strategy('ETHUSDT', k=0.5, position_pct=0.4, leverage=10)
             
-            # 15초 대기
-            time.sleep(15)
+            # 30초 대기
+            time.sleep(30)
     except KeyboardInterrupt:
         print("프로그램이 중지되었습니다.")
